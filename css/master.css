@@ -22,7 +22,7 @@ h1 {
 }
 
 p {
-  color: darkgray;
+  color: #858C9E;
   font-weight: bold;
   letter-spacing: 0.03rem;
   line-height: 1.7rem;
@@ -50,7 +50,7 @@ header p {
 /*FORM SECTION*/
 main {
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,13 +61,62 @@ main {
   box-shadow: 0px 10px 10px rgba(0,0,0, 0.1);
 }
 
-@media screen and (min-width: 568px) {
+form {
+  width: 100%;
+}
 
+.toggler {
+  display: flex;
+  font-size: 0.65rem;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 0;
+  color: #82899B;
+}
+
+
+.toggler span {
+  display: inline-block;
+  padding: 0.15rem 0;
+}
+
+label {
+  padding: 0.15rem 0;
+  position: relative;
+}
+
+label .discount { /*#TODO increase padding-x on desktop version*/
+  background-color: #FFF2EC;
+  padding: .2rem .3rem;
+  border-radius: 20px;
+  font-size: .6rem;
+  color: peru;
+}
+
+
+label .desktop {
+  display: none;
+}
+
+ 
+
+
+@media screen and (min-width: 568px) {
+ main {
+   max-width: 60%;
+ }
 }
 
 @media screen and (min-width: 768px) {
   main {
-    max-width: 35%;
+    max-width: 50%;
+  }
+
+  label .desktop {
+    display: inline-block;
+  }
+  label .mobile {
+    display: none;
   }
 }
 
@@ -75,6 +124,10 @@ main {
 @media screen and (min-width: 992px) {
   body {
     background-size: 100% auto; /*to stretch  background image on desktop vision*/
+  }
+
+  main {
+    width: 40%;
   }
 
 }

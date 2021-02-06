@@ -1,12 +1,11 @@
  #slider {
-  display: block;
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 20px;
   background-color: #F1F5FE;
-  height: 0.75rem;
+  height: 0.5rem;
   margin-bottom: 2rem;
   cursor: pointer;
 }
@@ -28,17 +27,17 @@
   background-position: center center;
   border: none;
   border-radius: 50%;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.8rem;
+  height: 1.8rem;
   cursor: pointer;
   box-shadow: 0px 10px 20px 3px rgba(13,217,195,0.6);
-  margin-top: -0.25rem;
+  margin-top: -0.6rem;
 }
 
-/*To imitate Firefox RANGE PROGRESS a linear gradient is set with JJ script*/
+/*To imitate Firefox RANGE PROGRESS a linear gradient is set with JS script*/
 #slider::-webkit-slider-runnable-track {
   border-radius: 20px;
-  /* background: linear-gradient(to right, #A1F2EA 50%, red 50% 100%); */
+  height: 0.5rem;
 }
 
 
@@ -53,8 +52,8 @@
   background-position: center center;
   border: none;
   border-radius: 50%;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.8rem;
+  height: 1.8rem;
   cursor: pointer;
   box-shadow: 0px 10px 20px 3px rgba(13,217,195,0.6);
 }
@@ -66,7 +65,7 @@
 
 #slider::-moz-range-progress {
   background-color: #A1F2EA;
-  height: 0.75rem;
+  height: 0.5rem;
   border-radius: 20px;
 }
 /*End of CSS for FIREFOX BROWSER*/
@@ -80,8 +79,8 @@
   background-position: center center;
   border: none;
   border-radius: 50%;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.8rem;
+  height: 1.8rem;
   cursor: pointer;
   box-shadow: 0px 10px 20px 3px rgba(13,217,195,0.6);
 }
@@ -89,7 +88,7 @@
 #slider::-ms-track {
   background: transparent;
   background-color: linear-gradient(to right, #A1F2EA 20%, #F1F5FE 20% 100%);
-  height: 0.75rem;
+  height: 0.5rem;
   border-radius: 20px;
   color: transparent; /*To remove default tick marks*/
 }
@@ -105,4 +104,46 @@
 
 #sliderContainer {
   position: relative;
-} */
+} 
+
+
+/*TOGGLER CSS*/
+
+#subscriptionToggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  margin: 0 .6rem; /*vertical margin to align spans to toggler*/
+  appearance: none;
+  -webkit-appearance: none;
+  background: #D1D9F0;
+  border: none;
+  border-radius: 20px;
+  transition: .5s
+}
+
+#subscriptionToggle:focus {
+  outline: none;
+}
+
+
+#subscriptionToggle:checked[type="checkbox"] {
+  background: #00b8d4;
+}
+
+#subscriptionToggle:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  background: white;
+  transition: .5s
+}
+
+#subscriptionToggle:checked:before {
+  left: 22px;
+}
+
