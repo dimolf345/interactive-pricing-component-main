@@ -1,0 +1,108 @@
+ #slider {
+  display: block;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 20px;
+  background-color: #F1F5FE;
+  height: 0.75rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+#slider:focus {
+  outline: none;
+}
+
+
+
+
+/*Start of CSS for CHROME BROWSER*/
+#slider::-webkit-slider-thumb {
+  background: transparent;
+  -webkit-appearance: none;
+  background: url('../images/icon-slider.svg');
+  background-color: #00bcd4;
+  background-size: 70% auto;   /*To obatain padding effect with arrows*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 3px rgba(13,217,195,0.6);
+  margin-top: -0.25rem;
+}
+
+/*To imitate Firefox RANGE PROGRESS a linear gradient is set with JJ script*/
+#slider::-webkit-slider-runnable-track {
+  border-radius: 20px;
+  /* background: linear-gradient(to right, #A1F2EA 50%, red 50% 100%); */
+}
+
+
+
+/*Start of CSS for FIREFOX BROWSER*/
+#slider::-moz-range-thumb {
+  /*Arrow SVG icon inserted as background image*/
+  background: url('../images/icon-slider.svg');
+  background-color: #00bcd4;
+  background-size: 70% auto;   /*To obatain padding effect with arrows*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 3px rgba(13,217,195,0.6);
+}
+
+#slider::-moz-range-thumb:active, #slider::-moz-range-thumb:hover {
+  background-color: #0097a7;
+}
+
+
+#slider::-moz-range-progress {
+  background-color: #A1F2EA;
+  height: 0.75rem;
+  border-radius: 20px;
+}
+/*End of CSS for FIREFOX BROWSER*/
+
+/*Start of CSS for IE BROWSER*/
+#slider::-ms-thumb {
+  background: url('../images/icon-slider.svg');
+  background-color: #00bcd4;
+  background-size: 70% auto;   /*To obatain padding effect with arrows*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 3px rgba(13,217,195,0.6);
+}
+
+#slider::-ms-track {
+  background: transparent;
+  background-color: linear-gradient(to right, #A1F2EA 20%, #F1F5FE 20% 100%);
+  height: 0.75rem;
+  border-radius: 20px;
+  color: transparent; /*To remove default tick marks*/
+}
+
+#slider::-ms-fill-lower {
+  background-color: #A1F2EA;
+}
+
+#slider::-ms-tooltip {
+  display: none;
+}
+/*End of CSS for IE BROWSER*/
+
+#sliderContainer {
+  position: relative;
+} */

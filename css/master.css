@@ -1,0 +1,79 @@
+/*PAGE RESETTING*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F9FAF;
+  background-image: url('../images/bg-pattern.svg');
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+h1 {
+  color: #263053;
+  font-size: 1.5rem;
+  margin: 2rem 1rem 1rem 1rem;
+  letter-spacing: 0.03rem;
+  z-index:4;
+}
+
+p {
+  color: darkgray;
+  font-weight: bold;
+  letter-spacing: 0.03rem;
+  line-height: 1.7rem;
+}
+/*HEADER SECTION*/
+header {
+  background-size: cover;
+  text-align: center;
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+header img {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header p {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/*FORM SECTION*/
+main {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0, 0.1);
+}
+
+@media screen and (min-width: 568px) {
+
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 35%;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  body {
+    background-size: 100% auto; /*to stretch  background image on desktop vision*/
+  }
+
+}
