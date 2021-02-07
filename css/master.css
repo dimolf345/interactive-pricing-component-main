@@ -1,13 +1,14 @@
 /*This is a commit test*/
 /*PAGE RESETTING*/
 * {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #F9FAF;
+  background-color: #F9FAFF;
   background-image: url('../images/bg-pattern.svg');
   background-repeat: no-repeat;
   z-index: -2;
@@ -16,14 +17,12 @@ body {
 h1 {
   color: #263053;
   font-size: 1.5rem;
-  margin: 2rem 1rem 1rem 1rem;
-  letter-spacing: 0.03rem;
+  margin: 1rem 0 1rem 0;
   z-index:4;
 }
 
 p {
   color: #858C9E;
-  font-weight: bold;
   letter-spacing: 0.03rem;
   line-height: 1.7rem;
 }
@@ -31,7 +30,7 @@ p {
 header {
   background-size: cover;
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 4rem;
   margin-bottom: 3rem;
 }
 
@@ -42,18 +41,22 @@ header img {
   transform: translateX(-50%);
 }
 
+header h1 {
+  letter-spacing: 0.1rem;
+}
+
 header p {
   width: 60%;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 /*FORM SECTION*/
 main {
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 85%;
   background-color: white;
   border: 1px solid lightgray;
@@ -63,17 +66,65 @@ main {
 
 form {
   width: 100%;
+  text-align:center;
 }
 
+
+
+/*To change order of flex-boxes btw Mobile and Desktop*/
+.ordered {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.first {
+  text-transform: uppercase;
+  order: 1;
+  font-weight: 600;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+}
+
+
+.second {
+  font-size: 0.8rem;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;;
+  order: 3;
+}
+
+
+#billing {
+  font-size: 1.8rem;
+  color: #263053;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+.third {
+  order: 2;
+}
+
+/*TOGGLER CSS*/
 .toggler {
+  width: 100%;
   display: flex;
   font-size: 0.65rem;
   justify-content: center;
   align-items: center;
   padding: .5rem 0;
   color: #82899B;
+  padding-bottom: 1rem;
 }
 
+hr {
+  border: .5px solid #F9FAFF;
+  margin: 1rem -2rem;
+  width: calc(100% + 4rem);
+}
 
 .toggler span {
   display: inline-block;
@@ -85,7 +136,21 @@ label {
   position: relative;
 }
 
-label .discount { /*#TODO increase padding-x on desktop version*/
+label::after {
+  content: '-25%';
+  position:absolute;
+  top: 0;
+  left: 100%;
+  margin-left: .3rem;
+  padding: .2rem .35rem;
+  border-radius: 20px;
+  background-color: #FFF2EC;
+  color: peru;
+  font-size: .5rem;
+  font-weight: bold;
+}
+
+label .discount {
   background-color: #FFF2EC;
   padding: .2rem .3rem;
   border-radius: 20px;
@@ -98,6 +163,32 @@ label .desktop {
   display: none;
 }
 
+ul {
+  list-style-image: url('../images/icon-check.svg');
+  margin-bottom: 1.5rem;
+  list-style-position: inside;
+  font-size: .8rem;
+}
+
+li {
+  margin-bottom: .7rem;
+}
+
+button {
+  height: 3rem;
+  margin-top: .5rem;
+  border-radius: 20px;
+  padding: .6rem 3rem;
+  background-color: #293356;
+  color: white;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #1c233c;
+  box-shadow: 3px 3px 5px #f1f5fe;
+}
  
 
 
@@ -108,8 +199,21 @@ label .desktop {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    background-size: 100% auto; /*to stretch  background image on desktop vision*/
+  }
+
+
   main {
     max-width: 50%;
+    margin-top: 4rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    flex-wrap: wrap;
   }
 
   label .desktop {
@@ -118,6 +222,61 @@ label .desktop {
   label .mobile {
     display: none;
   }
+
+  label::after {
+    width: max-content;  
+    content: '25% discount';
+    font-size: .7rem;
+  }
+
+  #sliderContainer {
+    width: 100%;
+  }
+
+  .ordered {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .first {
+    width: 50%;
+    margin-top: 1rem;
+
+  }
+
+  .second {
+    box-sizing: content-box;
+    width: 50%;
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  .third {
+    padding-top: 1rem!important;
+  }
+
+  .toggler {
+    font-size: .9rem;
+  }
+
+  ul {
+    font-size: .9rem;
+    text-align: left;
+    width: 50%;
+    margin-bottom: -4rem;
+  }
+
+  button {
+    width: 47%;
+    margin-top: 0;
+    align-self: flex-end;
+    justify-self: start;
+    padding: .5rem 2rem;
+    font-size: 1.1rem;
+  }
+
+
+  
 }
 
 
@@ -128,6 +287,19 @@ label .desktop {
 
   main {
     width: 40%;
+  }
+
+  header> h1 {
+    font-size: 2.2rem;
+  }
+  /*INCREASING FONT-SIZE FOR LARGER SCREENS*/
+
+  .fist, .second {
+    font-size:1.1rem;
+  }
+
+  #billing {
+    font-size: 1.8rem;
   }
 
 }
