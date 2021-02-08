@@ -22,14 +22,13 @@ let toggle = document.getElementById('subscriptionToggle');
 let pageViews = document.querySelector('.first');
 let billing = document.getElementById('billing');
 let rangeSlider = document.getElementById('slider');
-let sliderContainer = document.getElementById('sliderContainer');
 let percentage = calcSliderProgress(rangeSlider.value);
 let button = document.getElementsByTagName('button')[0];
 
 /*Following statements will be used to update webkit-slider-runnable-track for CHROME and EDGE browsers*/
 let sliderStyle = document.createElement('style');
 colorChromeSlider(percentage);
-document.body.append(sliderStyle)
+document.head.append(sliderStyle)
 /**/
 showBilling(rangeSlider.value);
 
