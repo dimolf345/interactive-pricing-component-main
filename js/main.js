@@ -10,7 +10,7 @@ function showBilling(arrayIndex) {
 
 function colorChromeSlider(rangeValue) {
   sliderStyle.innerHTML = `#slider::-webkit-slider-runnable-track {
-    background:linear-gradient(to right, #A1F2EA ${rangeValue}%, #F1F5FE ${rangeValue}% 100%);}`;
+    background: linear-gradient(to right, #A1F2EA ${rangeValue}%, #F1F5FE ${rangeValue}% 100%)}`;
 }
 
 function calcSliderProgress(sliderValue) {
