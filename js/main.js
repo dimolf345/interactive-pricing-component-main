@@ -23,11 +23,12 @@ let pageViews = document.querySelector('.first');
 let billing = document.getElementById('billing');
 let rangeSlider = document.getElementById('slider');
 let sliderContainer = document.getElementById('sliderContainer');
-let percentage = calcSliderProgress();
+let percentage = calcSliderProgress(rangeSlider.value);
 let button = document.getElementsByTagName('button')[0];
 
 /*Following statements will be used to update webkit-slider-runnable-track for CHROME and EDGE browsers*/
 let sliderStyle = document.createElement('style');
+console.log(percentage);
 colorChromeSlider(percentage);
 sliderContainer.append(sliderStyle);
 /**/
@@ -45,7 +46,7 @@ toggle.addEventListener('change', function (e) {
 
 
 
-/*To display a message when user  clicks a button*/
+/*To display a message when user clicks a button*/
 button.addEventListener('click', function(e) {
   e.preventDefault();
   let form = button.parentNode;
