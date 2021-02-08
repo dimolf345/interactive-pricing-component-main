@@ -10,7 +10,7 @@ function showBilling(arrayIndex) {
 
 function colorChromeSlider(rangeValue) {
   sliderStyle.innerHTML = `#slider::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #A1F2EA ${rangeValue}%, #F1F5FE ${rangeValue}% 100%);}`;
+    background:linear-gradient(to right, #A1F2EA ${rangeValue}%, #F1F5FE ${rangeValue}% 100%);}`;
 }
 
 function calcSliderProgress(sliderValue) {
@@ -28,9 +28,8 @@ let button = document.getElementsByTagName('button')[0];
 
 /*Following statements will be used to update webkit-slider-runnable-track for CHROME and EDGE browsers*/
 let sliderStyle = document.createElement('style');
-console.log(percentage);
 colorChromeSlider(percentage);
-sliderContainer.append(sliderStyle);
+document.body.append(sliderStyle)
 /**/
 showBilling(rangeSlider.value);
 
